@@ -36,3 +36,50 @@ median(Income)
 # stock rise chance 6/9 
 prop.test(6,9)
 prop.test(11,20,0.5,alternative = "greater")
+prop.test(6,9,0.5,conf.level = 0.95)
+#################
+#finding sample is from normal distribution or not  
+shapiro.test(Income)
+shapiro.test(Population)
+
+#### there is also a pckage nortest which is mainly used for normality thing.
+
+# following is use to find whehter binary is randomly distirbuted or not 
+
+library(tseries)
+library(datasets)
+test<- read.csv("D:/coding/data-hackathon/train.csv")
+str(test)
+runs.test(as.factor(test$Gender))
+#####################33
+####Comparing the Means of Two Samples
+attach(cars)
+t.test(cars$speed,dist)
+######################################################
+##################
+###########
+###############correlato test 
+attach(workingdata)
+str(workingdata)
+cor.test(Population,Income)
+#################################33
+
+
+
+
+
+##########testing groups for proportion  who is better like 
+#I recently taught statistics to 38 students and awarded a grade of A to 14 of them. A
+#colleague taught the same class to 40 students and awarded an A to only 10. I wanted
+#to know: Am I fostering grade inflation by awarding significantly more A grades than
+#she did?
+
+sucess<- c(10,4)
+trails<- c(15,8)
+prop.test(sucess,trails)
+
+
+############################
+## tersting two sample for sam edistribution which means that are they from same distribution  pattern
+## kolomongrov smirnov test 
+ks.test(Income,Population)
