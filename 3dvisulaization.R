@@ -23,7 +23,7 @@ with(USArrests,scatter3D(Murder,Assault,Rape-1,colvar = UrbanPop,col = gg.col(10
 ##############zooooooooooooooooom neaR origin
 plotdev(xlim=c(0,10),ylim=c(40,150),zlim=c(7,25))
 
-#caution following could corrupt your graphics ,mine have been done 
+#caution following could corrupt your graphics ,mine have been done use and do reset 
 dev.off()
 ########
 
